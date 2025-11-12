@@ -4,7 +4,7 @@
 <div class="pokemon-container">
   @for (p of pokemons; track p.id) {
     @if (!p.liked) {
-      <app-pokemon [pokemon]="p" (pokemonUpdated)="updatePokemon($event)"></app-pokemon>
+      <app-pokemon [pokemon]="p" (pokemonActualitzat)="actualitzarPokemon($event)"></app-pokemon>
     }
   }
 </div>
@@ -15,11 +15,11 @@
 <div class="pokemon-container">
   @for (p of pokemons; track p.id) {
     @if (p.liked) {
-      <app-pokemon [pokemon]="p" (pokemonUpdated)="updatePokemon($event)"></app-pokemon>
+      <app-pokemon [pokemon]="p" (pokemonActualitzat)="actualitzarPokemon($event)"></app-pokemon>
     }
   }
 
-  @if (noLikedPokemon) {
+  @if (sensePokemonsAmbLike) {
     <p>No hi ha cap Pokémon amb like.</p>
   }
 </div>

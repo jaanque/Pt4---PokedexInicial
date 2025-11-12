@@ -1,7 +1,7 @@
 <div class="pokemon-card">
   <img [src]="pokemon.url" [alt]="pokemon.name">
   <p>{{ pokemon.name }}</p>
-  <button (click)="toggleLike()">
+  <button (click)="canviarLike()">
     @if (pokemon.liked) {
       <span>Dislike</span>
     } @else {

@@ -11,10 +11,10 @@ import { CommonModule } from '@angular/common';
 })
 export class PokemonComponent {
   @Input() pokemon!: Pokemon;
-  @Output() pokemonUpdated = new EventEmitter<Pokemon>();
+  @Output() pokemonActualitzat = new EventEmitter<Pokemon>();
 
-  toggleLike() {
+  canviarLike() {
     this.pokemon.liked = !this.pokemon.liked;
-    this.pokemonUpdated.emit(this.pokemon);
+    this.pokemonActualitzat.emit(this.pokemon);
   }
 }
