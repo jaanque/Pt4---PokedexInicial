@@ -1,0 +1,25 @@
+<h1>Pokedex</h1>
+
+<h2>Pokemons Disponibles</h2>
+<div class="pokemon-container">
+  @for (p of pokemons; track p.id) {
+    @if (!p.liked) {
+      <app-pokemon [pokemon]="p" (pokemonUpdated)="updatePokemon($event)"></app-pokemon>
+    }
+  }
+</div>
+
+<hr>
+
+<h2>Pokemons amb Like</h2>
+<div class="pokemon-container">
+  @for (p of pokemons; track p.id) {
+    @if (p.liked) {
+      <app-pokemon [pokemon]="p" (pokemonUpdated)="updatePokemon($event)"></app-pokemon>
+    }
+  }
+
+  @if (pokemons.filter(p => p.liked).length === 0) {
+    <p>No hi ha cap Pokémon amb like.</p>
+  }
+</div>

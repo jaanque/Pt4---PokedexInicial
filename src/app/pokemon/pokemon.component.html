@@ -1,0 +1,11 @@
+<div class="pokemon-card">
+  <img [src]="pokemon.url" [alt]="pokemon.name">
+  <p>{{ pokemon.name }}</p>
+  <button (click)="toggleLike()">
+    @if (pokemon.liked) {
+      <span>Dislike</span>
+    } @else {
+      <span>Like</span>
+    }
+  </button>
+</div>

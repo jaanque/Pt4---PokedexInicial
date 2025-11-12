@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Pokemon } from './interfaces/pokemon.interface';
+import { PokemonComponent } from './pokemon/pokemon.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, PokemonComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -35,7 +37,7 @@ export class AppComponent {
       {id:16, name:"pidgeotto",url:"https://pokeapi.co/api/v2/pokemon/17/",liked: false},
       {id:17, name:"pidgeot",url:"https://pokeapi.co/api/v2/pokemon/18/",liked: false},
       {id:18, name:"rattata",url:"https://pokeapi.co/api/v2/pokemon/19/",liked: false},
-      {id:19, name:"raticate",url:"https://pokeapi.co/api/v2/pokemon/20/",liked: false}
+      {id:19, name:"raticate",url:"https.raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",liked: false}
     ];  
 
     // Actualitzem les URLs per obtenir les imatges dels sprites
