@@ -43,9 +43,9 @@ export class AppComponent {
     }
   }
 
-  actualitzarPokemon(event: Pokemon) {
-    let idx = this.pokemons.findIndex((value: Pokemon) => value.id === event.id);
-    this.pokemons[idx] = event;
+  actualitzarPokemon(pokemon: Pokemon) {
+    let idx = this.pokemons.findIndex((value: Pokemon) => value.id === pokemon.id);
+    this.pokemons[idx] = pokemon;
   }
 
   get sensePokemonsAmbLike(): boolean {
