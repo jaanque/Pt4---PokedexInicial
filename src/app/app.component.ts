@@ -54,4 +54,8 @@ export class AppComponent {
     // Actualitza el Pokemon a l'array amb les noves dades
     this.pokemons[idx] = event;
   }
+
+  get noLikedPokemon(): boolean {
+    return this.pokemons.filter(p => p.liked).length === 0;
+  }
 }

@@ -19,7 +19,7 @@
     }
   }
 
-  @if (pokemons.filter(p => p.liked).length === 0) {
+  @if (noLikedPokemon) {
     <p>No hi ha cap Pokémon amb like.</p>
   }
 </div>
